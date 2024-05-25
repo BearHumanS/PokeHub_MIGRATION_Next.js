@@ -28,7 +28,6 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@ducanh2912/next-pwa", "virtual:c2a2195a7f2514168282cf8223b9a52723dd89fb417fa9e3ac62a03646a79c16c5ec494fbc4673a2a2c5e32c82b5db074958425e8d0a0aaf93514c99290125ac#npm:10.2.6"],\
           ["@react-icons/all-files", "virtual:c2a2195a7f2514168282cf8223b9a52723dd89fb417fa9e3ac62a03646a79c16c5ec494fbc4673a2a2c5e32c82b5db074958425e8d0a0aaf93514c99290125ac#npm:4.1.0"],\
-          ["@types/dom-to-image", "npm:2.6.7"],\
           ["@types/dompurify", "npm:3.0.5"],\
           ["@types/file-saver", "npm:2.0.7"],\
           ["@types/node", "npm:20.11.30"],\
@@ -38,7 +37,6 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/eslint-plugin", "virtual:c2a2195a7f2514168282cf8223b9a52723dd89fb417fa9e3ac62a03646a79c16c5ec494fbc4673a2a2c5e32c82b5db074958425e8d0a0aaf93514c99290125ac#npm:7.4.0"],\
           ["antd", "virtual:c2a2195a7f2514168282cf8223b9a52723dd89fb417fa9e3ac62a03646a79c16c5ec494fbc4673a2a2c5e32c82b5db074958425e8d0a0aaf93514c99290125ac#npm:5.15.3"],\
           ["axios", "npm:1.6.8"],\
-          ["dom-to-image", "npm:2.6.0"],\
           ["dompurify", "npm:3.0.11"],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-next", "virtual:c2a2195a7f2514168282cf8223b9a52723dd89fb417fa9e3ac62a03646a79c16c5ec494fbc4673a2a2c5e32c82b5db074958425e8d0a0aaf93514c99290125ac#npm:14.1.4"],\
@@ -47,6 +45,7 @@ const RAW_RUNTIME_STATE =
           ["file-saver", "npm:2.0.5"],\
           ["firebase", "npm:10.9.0"],\
           ["framer-motion", "virtual:c2a2195a7f2514168282cf8223b9a52723dd89fb417fa9e3ac62a03646a79c16c5ec494fbc4673a2a2c5e32c82b5db074958425e8d0a0aaf93514c99290125ac#npm:11.0.20"],\
+          ["html-to-image", "npm:1.11.11"],\
           ["moment", "npm:2.30.1"],\
           ["next", "virtual:c2a2195a7f2514168282cf8223b9a52723dd89fb417fa9e3ac62a03646a79c16c5ec494fbc4673a2a2c5e32c82b5db074958425e8d0a0aaf93514c99290125ac#npm:14.1.4"],\
           ["prettier", "npm:3.2.5"],\
@@ -4509,15 +4508,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@types/dom-to-image", [\
-      ["npm:2.6.7", {\
-        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/@types-dom-to-image-npm-2.6.7-f696a34e70-10c0.zip/node_modules/@types/dom-to-image/",\
-        "packageDependencies": [\
-          ["@types/dom-to-image", "npm:2.6.7"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["@types/dompurify", [\
       ["npm:3.0.5", {\
         "packageLocation": "../../AppData/Local/Yarn/Berry/cache/@types-dompurify-npm-3.0.5-1338d8e659-10c0.zip/node_modules/@types/dompurify/",\
@@ -6390,15 +6380,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["dom-to-image", [\
-      ["npm:2.6.0", {\
-        "packageLocation": "./.yarn/unplugged/dom-to-image-npm-2.6.0-8af9792314/node_modules/dom-to-image/",\
-        "packageDependencies": [\
-          ["dom-to-image", "npm:2.6.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["dompurify", [\
       ["npm:3.0.11", {\
         "packageLocation": "../../AppData/Local/Yarn/Berry/cache/dompurify-npm-3.0.11-4bb92716e8-10c0.zip/node_modules/dompurify/",\
@@ -7872,6 +7853,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["hasown", "npm:2.0.2"],\
           ["function-bind", "npm:1.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["html-to-image", [\
+      ["npm:1.11.11", {\
+        "packageLocation": "../../AppData/Local/Yarn/Berry/cache/html-to-image-npm-1.11.11-faab8eba97-10c0.zip/node_modules/html-to-image/",\
+        "packageDependencies": [\
+          ["html-to-image", "npm:1.11.11"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -9607,7 +9597,6 @@ const RAW_RUNTIME_STATE =
           ["pokehub", "workspace:."],\
           ["@ducanh2912/next-pwa", "virtual:c2a2195a7f2514168282cf8223b9a52723dd89fb417fa9e3ac62a03646a79c16c5ec494fbc4673a2a2c5e32c82b5db074958425e8d0a0aaf93514c99290125ac#npm:10.2.6"],\
           ["@react-icons/all-files", "virtual:c2a2195a7f2514168282cf8223b9a52723dd89fb417fa9e3ac62a03646a79c16c5ec494fbc4673a2a2c5e32c82b5db074958425e8d0a0aaf93514c99290125ac#npm:4.1.0"],\
-          ["@types/dom-to-image", "npm:2.6.7"],\
           ["@types/dompurify", "npm:3.0.5"],\
           ["@types/file-saver", "npm:2.0.7"],\
           ["@types/node", "npm:20.11.30"],\
@@ -9617,7 +9606,6 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/eslint-plugin", "virtual:c2a2195a7f2514168282cf8223b9a52723dd89fb417fa9e3ac62a03646a79c16c5ec494fbc4673a2a2c5e32c82b5db074958425e8d0a0aaf93514c99290125ac#npm:7.4.0"],\
           ["antd", "virtual:c2a2195a7f2514168282cf8223b9a52723dd89fb417fa9e3ac62a03646a79c16c5ec494fbc4673a2a2c5e32c82b5db074958425e8d0a0aaf93514c99290125ac#npm:5.15.3"],\
           ["axios", "npm:1.6.8"],\
-          ["dom-to-image", "npm:2.6.0"],\
           ["dompurify", "npm:3.0.11"],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-next", "virtual:c2a2195a7f2514168282cf8223b9a52723dd89fb417fa9e3ac62a03646a79c16c5ec494fbc4673a2a2c5e32c82b5db074958425e8d0a0aaf93514c99290125ac#npm:14.1.4"],\
@@ -9626,6 +9614,7 @@ const RAW_RUNTIME_STATE =
           ["file-saver", "npm:2.0.5"],\
           ["firebase", "npm:10.9.0"],\
           ["framer-motion", "virtual:c2a2195a7f2514168282cf8223b9a52723dd89fb417fa9e3ac62a03646a79c16c5ec494fbc4673a2a2c5e32c82b5db074958425e8d0a0aaf93514c99290125ac#npm:11.0.20"],\
+          ["html-to-image", "npm:1.11.11"],\
           ["moment", "npm:2.30.1"],\
           ["next", "virtual:c2a2195a7f2514168282cf8223b9a52723dd89fb417fa9e3ac62a03646a79c16c5ec494fbc4673a2a2c5e32c82b5db074958425e8d0a0aaf93514c99290125ac#npm:14.1.4"],\
           ["prettier", "npm:3.2.5"],\

@@ -2612,13 +2612,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/dom-to-image@npm:^2.6.7":
-  version: 2.6.7
-  resolution: "@types/dom-to-image@npm:2.6.7"
-  checksum: 10c0/2f5045f116fba81fade6df5f4c6435280a6bf693a10df4ef6b0b586339833e1fe70649ffa8dc2cd221e65c1a87bc81d4765a4b6ee30da457f2bc5be92de9aa90
-  languageName: node
-  linkType: hard
-
 "@types/dompurify@npm:^3.0.5":
   version: 3.0.5
   resolution: "@types/dompurify@npm:3.0.5"
@@ -4101,13 +4094,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dom-to-image@npm:^2.6.0":
-  version: 2.6.0
-  resolution: "dom-to-image@npm:2.6.0"
-  checksum: 10c0/6c77851d2f301d2a4bbc3fa3f9d6f152bcc4f2a20b57185b9fa1fd81244c0c9a0c7f6deffb30461bba57d83f8b37d905fb5440d9bcda5b7221b968001a2c94fe
-  languageName: node
-  linkType: hard
-
 "dompurify@npm:^3.0.11":
   version: 3.0.11
   resolution: "dompurify@npm:3.0.11"
@@ -5311,6 +5297,13 @@ __metadata:
   dependencies:
     function-bind: "npm:^1.1.2"
   checksum: 10c0/3769d434703b8ac66b209a4cca0737519925bbdb61dd887f93a16372b14694c63ff4e797686d87c90f08168e81082248b9b028bad60d4da9e0d1148766f56eb9
+  languageName: node
+  linkType: hard
+
+"html-to-image@npm:^1.11.11":
+  version: 1.11.11
+  resolution: "html-to-image@npm:1.11.11"
+  checksum: 10c0/0b6349221ad253dfca01d165c589d44341e942faf0273aab28c8b7d86ff2922d3e8e6390f57bf5ddaf6bac9a3b590a8cdaa77d52a363354796dd0e0e05eb35d2
   languageName: node
   linkType: hard
 
@@ -6857,7 +6850,6 @@ __metadata:
   dependencies:
     "@ducanh2912/next-pwa": "npm:^10.2.6"
     "@react-icons/all-files": "npm:^4.1.0"
-    "@types/dom-to-image": "npm:^2.6.7"
     "@types/dompurify": "npm:^3.0.5"
     "@types/file-saver": "npm:^2.0.7"
     "@types/node": "npm:^20"
@@ -6867,7 +6859,6 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^7.4.0"
     antd: "npm:^5.15.3"
     axios: "npm:^1.6.8"
-    dom-to-image: "npm:^2.6.0"
     dompurify: "npm:^3.0.11"
     eslint: "npm:^8"
     eslint-config-next: "npm:14.1.4"
@@ -6876,6 +6867,7 @@ __metadata:
     file-saver: "npm:^2.0.5"
     firebase: "npm:^10.9.0"
     framer-motion: "npm:^11.0.20"
+    html-to-image: "npm:^1.11.11"
     moment: "npm:^2.30.1"
     next: "npm:14.1.4"
     prettier: "npm:^3.2.5"
