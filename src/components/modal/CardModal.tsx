@@ -9,7 +9,7 @@ import { Card } from '../mypage/Mycard';
 import styles from './CardModal.module.scss';
 import { MouseEvent, useRef } from 'react';
 import { FiPlus } from '@react-icons/all-files/fi/FiPlus';
-import domtoimage from 'dom-to-image';
+import { toBlob } from 'html-to-image';
 import { saveAs } from 'file-saver';
 import useCalculateInnerWidth from '@/hook/useCalculateInnerWidth';
 
@@ -67,11 +67,13 @@ const CardModal = ({ onModalToggle, cardData, isOpen }: CardModalProps) => {
   const onDownloadBtn = () => {
     const card = cardRef.current;
     if (card) {
-      const filter = (card: Node) => {
-        return (card as HTMLElement).tagName !== 'BUTTON';
-      };
-      domtoimage.toBlob(card, { filter: filter }).then((blob) => {
-        saveAs(blob, 'card.png');
+      const filter = (card: Node) => (card as HTMLElement).tagName !== 'BUTTON';
+      toBlob(card, { filter: filter }).then((blob) => {
+        if (blob) {
+          saveAs(blob, 'card.png');
+        } else {
+          console.error('Blob 생성에 실패했습니다.');
+        }
       });
     }
   };
