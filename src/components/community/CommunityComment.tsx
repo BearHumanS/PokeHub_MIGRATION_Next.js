@@ -27,10 +27,10 @@ interface CommunityData {
 // 커뮤니티 댓글을 쿼리하는 커스텀 훅
 export const useCommunityCommentQuery = (id: any) => {
   return useQuery(
-    ['comments', id.id],
+    ['comments', id.postId],
     async () => {
       const snapshot = await getDocs(
-        collection(db, `community/${id.id}/comments`),
+        collection(db, `community/${id.postId}/comments`),
       );
       const commentsData: CommunityData[] = snapshot.docs.map(
         (doc) =>
@@ -55,13 +55,15 @@ const CommunityComment = ({ id, data }: any) => {
   const [communityList, setCommunityList] = useState<CommunityData[]>([]);
 
   const communityId = id;
+
   const { data: communityLists }: any = useCommunityCommentQuery(id);
 
   /** 최초 1회 좋아요 값, 댓글 리스트 호출  */
   useEffect(() => {
     fetchHeartState();
+
     const unsubscribe = onSnapshot(
-      collection(db, `community/${id.id}/comments`),
+      collection(db, `community/${id.postId}/comments`),
       (snapshot) => {
         const commentsData: CommunityData[] = [];
         snapshot.docs.map((doc) => {
@@ -102,10 +104,10 @@ const CommunityComment = ({ id, data }: any) => {
         userImg: '회원 가입시 유저이미지를 파이어스토어에 등록한다.',
       };
 
-      await addComment(`community/${communityId.id}/comments/`, newComment);
+      await addComment(`community/${communityId.postId}/comments/`, newComment);
 
       // 댓글이 추가되면 'comments' 쿼리를 다시 실행하여 데이터를 업데이트
-      queryClient.invalidateQueries(['comments', id.id]);
+      queryClient.invalidateQueries(['comments', id.postId]);
     } catch (error) {
       console.error(error);
     } finally {
@@ -122,7 +124,7 @@ const CommunityComment = ({ id, data }: any) => {
     if (confirm && user?.uid) {
       try {
         await deleteCommunity(
-          `community/${communityId.id}/comments/${item.id}`,
+          `community/${communityId.postId}/comments/${item.id}`,
         );
         setCommunityList((prevComments) =>
           prevComments.filter((comment) => comment.id !== item.id),
@@ -134,11 +136,12 @@ const CommunityComment = ({ id, data }: any) => {
   };
 
   /** 게시글 좋아요 상태 firestore에서 가져오기 */
-  const heartPath = `/heart/${user?.uid}/like/${communityId.id}`;
-  const CommunityheartPath = `/community/${communityId.id}`;
+  const heartPath = `/heart/${user?.uid}/like/${communityId.postId}`;
+
+  const CommunityheartPath = `/community/${communityId.postId}`;
 
   const fetchHeartState = async () => {
-    if (!user?.uid || !communityId.id) return false;
+    if (!user?.uid || !communityId.postId) return false;
 
     try {
       const heartSnap = await getDocument(heartPath);
@@ -239,7 +242,7 @@ const CommunityComment = ({ id, data }: any) => {
                   <CommunityCommentItem
                     key={item.id}
                     value={item}
-                    id={communityId.id}
+                    id={communityId.postId}
                     onDel={onDelete}
                   />
                 </div>
